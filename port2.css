@@ -9,8 +9,8 @@ html,
 body {
     width: 100%;
     height: 100%;
-    background: #a19a8f;
-    overflow: hidden;
+    background: #616065;
+    overflow:scroll;
 }
 
 main {
@@ -24,29 +24,17 @@ section {
     width: 120vw;
     font-size: 3.5em;
     line-height: 1em;
-    background: #a19a8f;
+    background: #9b9da2;
 }
 
-.wrap {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.wrap img{
-    height: 290px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
 
 .wrap h2{
     font-size: 1.15em;
     line-height: 1em;
-    font-weight: 300;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
     text-transform: uppercase;
-    
+    color: rgb(0, 0, 0); 
 }
 .section {
     height: 100%;
@@ -57,11 +45,113 @@ section {
     left: -200px;
 }
 
-.image-container {
+.carousel {
+    width: 130vh;
+    height: 130vh;
+    position: relative;
+}
+
+.slide{
     position: absolute;
-    top: 100;
-    left: 0;
- }
+    inset: 0;
+    opacity: 0;
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+    object-position: center;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    border: none;
+    background: none;
+    font-size: 4rem;
+    bottom: 45%;
+    color: rgb(157, 171, 171);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding:0 .5rem;
+    
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    transform: scale(1.3);
+}
+
+.carousel-button.prev{
+    left: 1rem;
+}
+
+.carousel-button.next{
+    right: 1rem;
+}
+
+.section.production {
+    /* Your styles here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+/* Style the form container */
+.contact {
+    max-width: 500px;
+    margin: 150px;
+    text-align: center;
+}
+
+/* Style the form input fields */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #9b9da2;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Change the button color on hover */
+button[type="submit"]:hover {
+    background-color: #333633;
+}
+
+/* Style the form heading */
+.contact h1 {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0); 
+}
+
+
 
 .blocks {
     position: fixed;
@@ -77,9 +167,9 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 4rem;
+    width: 5rem;
     height: 100%;
-    background: #a19a8f;
+    background: #a1a4a9;
     z-index: 100;
     padding: 2rem 1.25rem;
 
@@ -90,15 +180,19 @@ section {
 
     pointer-events: auto;
     cursor: pointer;
-    border-left: 0.2rem solid #000;
+    border-left: 0.1rem solid #000000;
     font-weight: 500;
 }
 
 
-
+.block[data-block-section="1"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
 
 .block[data-block-section="2"].init {
-    left: calc(100vw - 16rem);
+    left: calc(100vw - 15rem);
 }
 
 .block[data-block-section="2"].fixed {
@@ -107,13 +201,13 @@ section {
 }
 
 .block[data-block-section="2"]:hover {
-    background: rgb(161, 143, 143);
-    filter: brightness(140%) hue-rotate(0deg);
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
 	transform: scale(1.04);
 }
 
 .block[data-block-section="3"].init {
-    left: calc(100vw - 12rem);
+    left: calc(100vw - 10rem);
 }
 
 .block[data-block-section="3"].fixed {
@@ -121,13 +215,13 @@ section {
 }
 
 .block[data-block-section="3"]:hover {
-    background: rgb(161, 143, 143);
-    filter: brightness(140%) hue-rotate(0deg);
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
 	transform: scale(1.04);
 }
 
 .block[data-block-section="4"].init {
-    left: calc(100vw - 8rem);
+    left: calc(100vw - 5rem);
 }
 
 .block[data-block-section="4"].fixed {
@@ -135,13 +229,13 @@ section {
 }
 
 .block[data-block-section="4"]:hover {
-    background: rgb(161, 143, 143);
-    filter: brightness(140%) hue-rotate(0deg);
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
 	transform: scale(1.04);
 }
 
 .block[data-block-section="5"].init {
-    left: calc(100vw - 4rem);
+    left: calc(100vw - 10rem);
 }
 
 .block[data-block-section="5"].fixed {
@@ -149,8 +243,22 @@ section {
 }
 
 .block[data-block-section="5"]:hover {
-    background: rgb(161, 143, 143);
-    filter: brightness(140%) hue-rotate(0deg);
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block[data-block-section="6"].init {
+    left: calc(100vw - 5rem);
+}
+
+.block[data-block-section="6"].fixed {
+    left: 1rem;
+}
+
+.block[data-block-section="6"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
 	transform: scale(1.04);
 }
 
@@ -165,13 +273,13 @@ section {
     text-transform: uppercase;
     font-size: 2rem;
     line-height: 1rem;
-    color: #000;
+    color: #000000;
     font-family: 'Playfair Display', serif;
     font-weight: 450;
 }
 
 .block__title:hover {
-    color: rgb(214, 182, 182);
+    color: rgb(255, 255, 255);
 }
 
 
