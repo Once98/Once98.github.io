@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #616065;
+    overflow:scroll;
+}
+
+main {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    overflow: hidden;
+}
+
+section {
+    width: 120vw;
+    font-size: 3.5em;
+    line-height: 1em;
+    background: #9b9da2;
+}
+
+
+.wrap h2{
+    font-size: 1.15em;
+    line-height: 1em;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0); 
+}
+.section {
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: -200px;
+}
+
+.carousel {
+    width: 130vh;
+    height: 130vh;
+    position: relative;
+}
+
+.slide{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.slide[data-active]{
+    opacity: 1;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+    object-position: center;
+}
+
+.carousel-button {
+    position: absolute;
+    z-index: 2;
+    border: none;
+    background: none;
+    font-size: 4rem;
+    bottom: 45%;
+    color: rgb(157, 171, 171);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding:0 .5rem;
+    
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+    transform: scale(1.3);
+}
+
+.carousel-button.prev{
+    left: 1rem;
+}
+
+.carousel-button.next{
+    right: 1rem;
+}
+
+.section.production {
+    /* Your styles here */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
+/* Style the form container */
+.contact {
+    max-width: 500px;
+    margin: 150px;
+    text-align: center;
+}
+
+/* Style the form input fields */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #9b9da2;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    background-color: #000;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Change the button color on hover */
+button[type="submit"]:hover {
+    background-color: #333633;
+}
+
+/* Style the form heading */
+.contact h1 {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: 100;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0); 
+}
+
+
+
+.blocks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5rem;
+    height: 100%;
+    background: #a1a4a9;
+    z-index: 100;
+    padding: 2rem 1.25rem;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    pointer-events: auto;
+    cursor: pointer;
+    border-left: 0.1rem solid #000000;
+    font-weight: 500;
+}
+
+
+.block[data-block-section="1"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block[data-block-section="2"].init {
+    left: calc(100vw - 15rem);
+}
+
+.block[data-block-section="2"].fixed {
+    left: 40rem;
+    border-left: 0.2rem solid #000;
+}
+
+.block[data-block-section="2"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block[data-block-section="3"].init {
+    left: calc(100vw - 10rem);
+}
+
+.block[data-block-section="3"].fixed {
+    left: 4rem;
+}
+
+.block[data-block-section="3"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block[data-block-section="4"].init {
+    left: calc(100vw - 5rem);
+}
+
+.block[data-block-section="4"].fixed {
+    left: 12rem;
+}
+
+.block[data-block-section="4"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block[data-block-section="5"].init {
+    left: calc(100vw - 10rem);
+}
+
+.block[data-block-section="5"].fixed {
+    left: 1rem;
+}
+
+.block[data-block-section="5"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block[data-block-section="6"].init {
+    left: calc(100vw - 5rem);
+}
+
+.block[data-block-section="6"].fixed {
+    left: 1rem;
+}
+
+.block[data-block-section="6"]:hover {
+    background: #999999;
+    filter: brightness(100%) hue-rotate(0deg);
+	transform: scale(1.04);
+}
+
+.block__title {
+    position: relative;
+    white-space: nowrap;
+    transform: rotate(-90deg) translate(-50%);
+}
+
+.block__number,
+.block__title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 1rem;
+    color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-weight: 450;
+}
+
+.block__title:hover {
+    color: rgb(255, 255, 255);
+}
+
+
