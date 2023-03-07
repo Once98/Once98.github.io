@@ -5,6 +5,7 @@
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    -webkit-text-size-adjust: 100%;
   }
 
   .title-container{
@@ -36,6 +37,7 @@
     text-decoration: underline;
     text-transform:uppercase;
     cursor: crosshair;
+    -webkit-text-size-adjust: 100%;
 }
 
 .enter-btn:hover {
@@ -46,5 +48,6 @@
   .enter-btn{
     font-weight: 300;
     left: 30%;
+    -webkit-text-size-adjust: 100%;
   }
 }
