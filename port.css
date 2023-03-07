@@ -41,3 +41,10 @@
 .enter-btn:hover {
     font-size: 40px;
 }
+
+@media(max-width: 1400px){
+  .enter-btn{
+    font-weight: 300;
+    left: 30%;
+  }
+}
