@@ -5,7 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>horizontal scroll sections</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
     <link rel="stylesheet" href="port2.css" />
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
 </head>
@@ -14,20 +18,18 @@
     <div class="blocks">
         <div class="block init" data-block-section="1" data-href="home">
             <div class="block__title">Home</div>
+            <div class="bx bx-menu" id="menu-icon"></div>
             <div class="block__number">01</div>
         </div>
         <div class="block init" data-block-section="2" data-href="collection">
-            <div class="block__title">Portfolio pages</div>
+            <div class="block__title">Portfolio</div>
             <div class="block__number">02</div>
         </div>
         <div class="block init" data-block-section="3" data-href="material">
-            <div class="block__title">Website demo</div>
+            <div class="block__title">contact</div>
             <div class="block__number">03</div>
         </div>
-        <div class="block init" data-block-section="4" data-href="production">
-            <div class="block__title">Contact me</div>
-            <div class="block__number">04</div>
-        </div>
+        
     </div>
     <main data-scroll-container>
         <div class="wrap" data-scroll-section>
@@ -87,11 +89,7 @@
                 </div>
             </section>
             <section class="section material" data-block-section="3" id="material">
-                <div class="video">
-                    <video width="900" controls>
-                        <source src="2023-02-25 16-24-11.mp4" type="video/mp4">
-                    </video>
-                </div>
+    
             </section>
             <section class="section production" data-block-section="4" id="production">
                 <div class="contact">
